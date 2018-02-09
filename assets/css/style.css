@@ -1,0 +1,20 @@
+.container .jumbotron {
+    border-radius: 0;
+}
+
+.jumbotron {
+    margin-top: 4%;
+    /* background-color: #b5e0d8; */
+}
+
+.crystal-image {
+    border: none;
+}
+
+#number-to-guess,
+#counter,
+#wins,
+#losses {
+    font-size: 4em;
+    color: #333;
+}
