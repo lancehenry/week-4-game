@@ -1,20 +1,35 @@
+/************************************
+JUMBOTRON
+************************************/
+
 .container .jumbotron {
     border-radius: 0;
 }
 
-.jumbotron {
-    margin-top: 4%;
-    /* background-color: #b5e0d8; */
+/************************************
+ROW - 1 (SCORE, WINS, LOSSES)
+************************************/
+
+.row-1 {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    font-size: 4em;
+    color: #333;
 }
 
+/************************************
+CRYSTAL ROW AND IMAGES
+************************************/
+
 .crystal-image {
+    padding: 30px;
     border: none;
 }
 
-#number-to-guess,
-#counter,
-#wins,
-#losses {
-    font-size: 4em;
-    color: #333;
+#crystal-1,
+#crystal-2,
+#crystal-3,
+#crystal-4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

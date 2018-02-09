@@ -4,17 +4,17 @@
 // Create a function that resets the game.
 // Create a function that alerts "You win"
 // Create a function that alerts "You lose"
-// Create an on click function for crystal one, two, three, four, which calls back to other functions and appends to the user total points. You might need an if/else statement for the win/losses part of each click.
+// Create an on click function for crystal one, two, three, four, which calls back other functions and appends to the user total points.
 
 $(document).ready(function () {
 
     // PICKS A RANDOM NUMBER BETWEEN 19 - 120 AT THE START OF THE GAME
     var randomNumber = Math.floor(Math.random() * 101 + 19);
 
-    // THIS APPENDS THE RANDOM NUMBER TO THE NUMBER-TO-GUESS ID IN HTML DOC
+    // APPENDS THE RANDOM NUMBER TO THE NUMBER-TO-GUESS ID IN HTML DOC
     $("#number-to-guess").text(randomNumber);
 
-    // THIS PICKS A RANDOM NUMBER BETWEEN 1 - 12 FOR EACH CRYSTAL
+    // PICKS A RANDOM NUMBER BETWEEN 1 - 12 FOR EACH CRYSTAL
     var crystalOne = Math.floor(Math.random() * 11 + 1);
     var crystalTwo = Math.floor(Math.random() * 11 + 1);
     var crystalThree = Math.floor(Math.random() * 11 + 1);
@@ -25,7 +25,7 @@ $(document).ready(function () {
     var wins = 0;
     var losses = 0;
 
-    // THIS APPENDS THE NUMBER OF WINS AND LOSSES TO THE WINS ID AND LOSSES ID IN HTML DOC
+    // APPENDS THE NUMBER OF WINS AND LOSSES TO THE WINS ID AND LOSSES ID IN HTML DOC
     $("#wins").text(wins);
     $("#losses").text(losses);
 
@@ -33,18 +33,20 @@ $(document).ready(function () {
     function reset() {
         randomNumber = Math.floor(Math.random() * 101 + 19);
         $("#number-to-guess").text(randomNumber);
-        // var crystals = [];
-        // var numberOfCrystals = 4;
-        // for (var i = 0; i < numberOfCrystals; ++i) {
-        //     crystals.push(Math.floor(Math.random() * 11 + 1));
-        // }
-        var crystalOne = Math.floor(Math.random() * 11 + 1);
-        var crystalTwo = Math.floor(Math.random() * 11 + 1);
-        var crystalThree = Math.floor(Math.random() * 11 + 1);
-        var crystalFour = Math.floor(Math.random() * 11 + 1);
+        crystalOne = Math.floor(Math.random() * 11 + 1);
+        crystalTwo = Math.floor(Math.random() * 11 + 1);
+        crystalThree = Math.floor(Math.random() * 11 + 1);
+        crystalFour = Math.floor(Math.random() * 11 + 1);
         userTotal = 0;
         $("#counter").text(userTotal);
     }
+
+    // COULDN'T GET THIS TO WORK WITHIN THE RESET FUNCTION ABOVE
+    // var crystals = [];
+    // var numberOfCrystals = 4;
+    // for (var i = 0; i < numberOfCrystals; ++i) {
+    //     crystals.push(Math.floor(Math.random() * 11 + 1));
+    // }
 
     // ADDS THE WIN TO THE WINS ID IN HTML DOC
     function youWin() {
