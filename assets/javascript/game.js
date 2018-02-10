@@ -8,28 +8,32 @@
 
 $(document).ready(function () {
 
-    // PICKS A RANDOM NUMBER BETWEEN 19 - 120 AT THE START OF THE GAME
+// VARIABLES
+
+    // Picks a random number between 19 - 120 at the start of the game
     var randomNumber = Math.floor(Math.random() * 101 + 19);
 
-    // APPENDS THE RANDOM NUMBER TO THE NUMBER-TO-GUESS ID IN HTML DOC
+    // Appends the random number to the number-to-guess ID in HTML doc
     $("#number-to-guess").text(randomNumber);
 
-    // PICKS A RANDOM NUMBER BETWEEN 1 - 12 FOR EACH CRYSTAL
+    // Picks a random number between 1 - 12 for each crystal
     var crystalOne = Math.floor(Math.random() * 11 + 1);
     var crystalTwo = Math.floor(Math.random() * 11 + 1);
     var crystalThree = Math.floor(Math.random() * 11 + 1);
     var crystalFour = Math.floor(Math.random() * 11 + 1);
 
-    // VARIABLES TO KEEP SCORE
+    // Keeping score
     var userTotal = 0;
     var wins = 0;
     var losses = 0;
 
-    // APPENDS THE NUMBER OF WINS AND LOSSES TO THE WINS ID AND LOSSES ID IN HTML DOC
+    // Appends the number of wins and losses to the wins ID and losses ID in HTML doc
     $("#wins").text(wins);
     $("#losses").text(losses);
 
-    // FUNCTION THAT RESETS THE GAME
+// FUNCTIONS
+
+    // Resets the game
     function reset() {
         randomNumber = Math.floor(Math.random() * 101 + 19);
         $("#number-to-guess").text(randomNumber);
@@ -41,14 +45,16 @@ $(document).ready(function () {
         $("#counter").text(userTotal);
     }
 
-    // COULDN'T GET THIS TO WORK WITHIN THE RESET FUNCTION ABOVE
-    // var crystals = [];
-    // var numberOfCrystals = 4;
-    // for (var i = 0; i < numberOfCrystals; ++i) {
-    //     crystals.push(Math.floor(Math.random() * 11 + 1));
-    // }
+    /*
+    COULDN'T GET THIS TO WORK WITHIN THE RESET FUNCTION ABOVE
+    var crystals = [];
+    var numberOfCrystals = 4;
+    for (var i = 0; i < numberOfCrystals; ++i) {
+        crystals.push(Math.floor(Math.random() * 11 + 1));
+    }
+    */
 
-    // ADDS THE WIN TO THE WINS ID IN HTML DOC
+    // Adds the win to the wins ID in HTML doc
     function youWin() {
         alert("You're a winner!");
         wins++;
@@ -56,7 +62,7 @@ $(document).ready(function () {
         reset();
     }
 
-    // ADDS THE LOSS TO THE LOSSES ID IN HTML DOC
+    // Adds the loss to the losses ID in HTML doc
     function youLose() {
         alert("You're a loser!");
         losses++;
@@ -64,7 +70,7 @@ $(document).ready(function () {
         reset();
     }
 
-    // CLICK FUNCTION FOR CRYSTAL 1 IN HTML DOC
+    // On click function for crystal 1 in HTML doc
     $("#crystal-1").on("click", function () {
         userTotal = userTotal + crystalOne;
         $("#counter").text(userTotal);
@@ -75,7 +81,7 @@ $(document).ready(function () {
         }
     })
 
-    // CLICK FUNCTION FOR CRYSTAL 2 IN HTML DOC
+    // On click function for crystal 2 in HTML doc
     $("#crystal-2").on("click", function () {
         userTotal = userTotal + crystalTwo;
         $("#counter").text(userTotal);
@@ -86,7 +92,7 @@ $(document).ready(function () {
         }
     })
 
-    // CLICK FUNCTION FOR CRYSTAL 3 IN HTML DOC
+    // On click function for crystal 3 in HTML doc
     $("#crystal-3").on("click", function () {
         userTotal = userTotal + crystalThree;
         $("#counter").text(userTotal);
@@ -97,7 +103,7 @@ $(document).ready(function () {
         }
     })
 
-    // CLICK FUNCTION FOR CRYSTAL 4 IN HTML DOC
+    // On click function for crystal 4 in HTML doc
     $("#crystal-4").on("click", function () {
         userTotal = userTotal + crystalFour;
         $("#counter").text(userTotal);
