@@ -7,7 +7,7 @@ This is the week 4 assignment using the skills we've learned up to this point. O
 HTML, CSS, Bootstrap, jQuery
 
 ## See it here
-https://lschmittling.github.io/week-4-game/
+https://lancehenry.github.io/week-4-game/
 
 
 
